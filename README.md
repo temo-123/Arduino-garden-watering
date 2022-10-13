@@ -5,7 +5,7 @@
 
 <p>For project using Arduino Nano. Sensors and moduls: oled display 128x64(6pin), 2 relemodul, BMP085 termo sensor, RTC DS1302, Rain sensor, Soil moisture sensor, 2 switch, 4 boton.</p>
 
-<!-- [Progect gallery](/docs/GALLERY.md) -->
+[Project gallery](/docs/GALLERY.md)
 <!-- Ctrl+Shift+V - for demo test  -->
 
 <h1 align="center">Best wishes</h1>

@@ -1,0 +1,466 @@
+/* .functional_bottoms_position{
+  position: absolute;
+    bottom: 4em;
+} */
+
+/* 
+*
+* Rein styles
+*
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-image: linear-gradient(to bottom, #030420, black 70%);
+  /* background-image: linear-gradient(lightblue, black); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+hr {
+  width: 50px;
+  border-color: transparent;
+  border-right-color: rgba(255, 255, 255, 0.7);
+  border-right-width: 50px;
+  position: absolute;
+  bottom: 100%;
+  transform-origin: 100% 50%;
+  animation-name: rain;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rain {
+  from {
+    transform: rotate(105deg) translateX(0);
+  } 
+  to {
+    transform: rotate(105deg) translateX(calc(100vh + 20px));
+  }
+}
+/* 
+*
+* https://copyassignment.com/draw-house-using-html-and-css/
+*
+ */
+body {
+    /* height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lobster', cursive;
+
+    position: relative; */
+  }
+  
+  .outside_tempo{
+    text-align: center;
+    margin-top: -65px;
+  }
+  .inside_tempo{
+    z-index: 3;
+    right: 17%;
+  }
+ 
+  .titlename{
+    font-family: 'Lobster', cursive;
+    font-size: 100px;
+    color: #0b16ae;
+    text-align: center;
+    /* margin-top: 20px; */
+    margin-top: -150px;
+  }
+ 
+  /* .container {
+    height: 450px;
+    width: 400px;
+    position: relative;
+  } */
+
+  .house_position{
+    /* height: 450px; */
+    /* width: 400px; */
+    /* position: relative; */
+  }
+ 
+  .house_position * {
+    position: absolute;
+  }
+ 
+  .house {
+    top: 65%;
+    left: 8%;
+    height: 200px;
+    width: 260px;
+    background:brown;
+  }
+  .house::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 33px;
+    height: 183px;
+    width: 183.5px;
+    background: brown;
+    transform: rotate(45deg);
+    border-top: 10px solid black;
+    border-left: 10px solid black;
+    z-index: 2
+  }
+  .house::after {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    height: 70px;
+    width: 30px;
+    background: black;
+    z-index: 1;
+  }
+  .window {
+    top: 35px;
+    left: 25px;
+    height: 80px;
+    width: 70px;
+    background: #96ebff;
+    z-index: 3;
+  }
+  .window::before,
+  .window::after {
+    content: '';
+    position: absolute;
+    background: silver;
+  }
+  .window::before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+  }
+  .window::after {
+    top: 50%;
+    height: 1px;
+    width: 100%;
+  }
+ 
+  .door {
+    top: 70px;
+    left: 150px;
+    height: 130px;
+    width: 70px;
+    background: black;
+    z-index: 3;
+  }
+  .door::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    background: #96ebff;
+  }
+  .house_flower {
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    background: green;
+    z-index: 4;
+    border-radius: 0px 100px 0px 0px;
+    box-shadow: 1px -1px 7px rgba(0, 0, 0, .5);
+  }
+
+/* 
+*
+* https://blog.logrocket.com/using-css-border-radius-make-shapes/
+*
+*/
+  :root {
+    --main-flower: #517bd6;
+    --nose: #ffc0cb;
+    --stem: #51d691;
+    --pot: #FF7043;
+    --pot-shadow: #d66f51;
+  }
+  .flower_position{
+    margin-left: 30em;
+  }
+
+  .flower {
+    position: relative;
+  }
+
+  .flower__head {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: var(--main-flower);
+    margin-top: 50px;
+  }
+  
+  .flower__head::after, .flower__head::before {
+    content: '';
+    position: absolute;
+    background: var(--main-flower);
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    transform: rotate(60deg);
+  }
+  
+  .flower__head::before {
+    transform: rotate(-60deg);
+  }
+  .flower__eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .flower__eye.left {
+    left: 30%;
+  }
+  .flower__eye.right {
+    left: 55%;
+  }
+  .flower__eye span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background: black;
+    border-radius: 50%;
+  }
+  .flower__nose {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    background: var(--nose);
+    border-radius: 50%;
+  }
+  .flower__stem {
+    position: absolute;
+    height: 150px;
+    width: 8px;
+    background: var(--stem);
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .flower__leaf {
+    width: 30px;
+    height: 30px;
+    background: var(--stem);
+    position: absolute;
+    top: 130px;
+    left: 21px;
+    border-radius: 50px;
+    border-top-right-radius: 0;
+    transform: var(--transform-leaves-left);
+  }
+  .flower__leaf--shadow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.25);
+    height: 15px;
+    width: 15px;
+    top: 144px;
+    left: 29px;
+    border-radius: 50px;
+    border-top-right-radius: 0;
+    transform: var(--transform-leaves-left);
+  }
+  .flower__leaf--shadow.oposite {
+    top: 164px;
+    left: 75px;
+    transform: var(--transform-leaves-right);
+  }
+  .flower__leaf.oposite {
+    top: 150px;
+    left: 70px;
+    transform: var(--transform-leaves-right);
+  }
+  .flower__leaf__left__position{
+    transform: rotate(-90deg) !important;
+  }
+  .flower__pot {
+    width: 100px;
+    height: 20px;
+    background-color: var(--pot);
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .flower__pot--shadow {
+    width: 72px;
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--pot-shadow);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .flower__pot--bottom {
+    width: 50px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 50px solid var(--pot);
+    top: 20px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @keyframes blink {
+    0%, 100% {
+      transform: scale(1, 0.05);
+    }
+    5%, 95% {
+      transform: scale(1, 1);
+    }
+  }
+  .flower__eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background: #fff;
+    border-radius: 50%;
+    animation: blink 3s infinite; /* animation added */
+  }
+
+/* 
+*
+*https://www.w3schools.com/css/css3_buttons.asp
+*
+ */
+ .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button_green {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button_green:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button_blue {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button_blue:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button_red {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button_red:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button_gray {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button_gray:hover {background-color: #e7e7e7;}
+
+.button_black {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button_black:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+
+/* 
+*
+* Moon
+*
+* https://nazanin-ashrafi.hashnode.dev/how-to-make-a-moon-with-css
+* 
+ */
+.moon_container {
+  position: absolute;
+  top: 6%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.moon {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  box-shadow: 1.5rem 1.8rem 0 0 #fff77e;
+}
+
+
+/* 
+*
+* Soon
+*
+ */
+.soon_container {
+  position: absolute;
+  top: 2%;
+  left: 65%;
+}
+
+.soon {
+  width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: #ffee01;
+}
